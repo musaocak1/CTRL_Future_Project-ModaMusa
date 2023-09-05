@@ -16,7 +16,7 @@ ModaMusa is an online clothing store created using HTML, CSS and JavaScript. Thi
 Clone the project:
 
 ```bash
-git clone https://github.com/kullaniciadi/modamusa.git 
+git clone https://github.com/musaocak1/CTRL_Future_Project-ModaMusa.git 
 ```
 
 
