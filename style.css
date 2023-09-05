@@ -592,16 +592,6 @@ footer .copyright {
     margin-right: 50px;
 }
 
-.small-img-group {
-    display: flex;
-    justify-content: space-between;
-}
-
-.small-img-col {
-    flex-basis: 24%;
-    cursor: pointer;
-}
-
 #prodetails .single-pro-details {
     width: 50%;
     padding-top: 30px;
@@ -638,7 +628,7 @@ footer .copyright {
     color: #fff;
 }
 
-#prodetails .single-pro-details span {
+#prodetails .single-pro-details p {
     line-height: 25px;
 }
 
