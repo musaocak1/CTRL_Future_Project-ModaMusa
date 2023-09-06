@@ -168,17 +168,60 @@ document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
 
-    // Ürün bilgilerini JSON'dan çekin
+
     const product = jsonData.cloths.find(item => item.sys.id === id);
 
     if (product) {
-        // Ürün bilgilerini sayfada gösterin
         document.getElementById('MainImg').src = product.fields.image;
         document.getElementById('product-name').textContent = product.fields.name;
         document.getElementById('product-price').textContent = product.fields.cost;
         document.getElementById('product-description').textContent = product.fields.details;
     } else {
-        // Ürün bulunamazsa bir hata mesajı gösterin veya yönlendirme yapın
         console.error('Ürün bulunamadı');
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+
+    const allProducts = jsonData.cloths;
+    const allProductIds = allProducts.map(item => item.sys.id);
+    const randomProductIds = getRandomProducts(allProductIds, 4);
+
+    randomProductIds.forEach((productId, index) => {
+        const product = allProducts.find(item => item.sys.id === productId);
+        const productElement = document.getElementById(`product_${index + 1}`);
+
+        if (product && productElement) {
+            productElement.innerHTML = `
+                <img src="${product.fields.image}" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>${product.fields.name}</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>${product.fields.cost}</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            `;
+        }
+    });
+});
+
+function getRandomProducts(productIds, num) {
+    const randomProducts = [];
+
+    while (randomProducts.length < num) {
+        const randomIndex = Math.floor(Math.random() * productIds.length);
+        const randomProductId = productIds[randomIndex];
+
+        if (!randomProducts.includes(randomProductId)) {
+            randomProducts.push(randomProductId);
+        }
+    }
+
+    return randomProducts;
+}
