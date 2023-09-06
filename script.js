@@ -137,7 +137,7 @@ var jsonData = {
         {
             "sys": { "id": "14" },
             "fields": {
-                "name": "Light grey striped shorts with belt ",
+                "name": "Light grey striped shorts with belt",
                 "image": "img/products/n6.jpg",
                 "cost": "$70",
                 "details": "Step into summer with our Light Grey Striped Shorts with Belt. These stylish shorts offer a relaxed yet fashionable look, perfect for warm days. The subtle striped pattern adds a touch of sophistication, and the included belt completes the ensemble. Crafted for both comfort and style, these shorts are a must-have addition to your summer wardrobe."
@@ -167,19 +167,18 @@ var jsonData = {
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
-  
+
     // Ürün bilgilerini JSON'dan çekin
     const product = jsonData.cloths.find(item => item.sys.id === id);
-  
+
     if (product) {
-      // Ürün bilgilerini sayfada gösterin
-      document.getElementById('MainImg').src = product.fields.image;
-      document.getElementById('product-name').textContent = product.fields.name;
-      document.getElementById('product-price').textContent = product.fields.cost;
-      document.getElementById('product-description').textContent = product.fields.details;
+        // Ürün bilgilerini sayfada gösterin
+        document.getElementById('MainImg').src = product.fields.image;
+        document.getElementById('product-name').textContent = product.fields.name;
+        document.getElementById('product-price').textContent = product.fields.cost;
+        document.getElementById('product-description').textContent = product.fields.details;
     } else {
-      // Ürün bulunamazsa bir hata mesajı gösterin veya yönlendirme yapın
-      console.error('Ürün bulunamadı');
+        // Ürün bulunamazsa bir hata mesajı gösterin veya yönlendirme yapın
+        console.error('Ürün bulunamadı');
     }
-  });
-  
+});

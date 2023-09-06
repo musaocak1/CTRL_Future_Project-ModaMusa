@@ -1,6 +1,6 @@
 # ModaMusa Online Clothing Store
 
-ModaMusa is an online clothing store created using HTML, CSS and JavaScript. This project includes responsive design that will allow users to view the website seamlessly on different devices (computer, phone, tablet).
+ModaMusa is an online clothing store created using HTML, CSS and JavaScript. We utilize JSON data to dynamically generate HTML pages. This approach allows us to manage and display product information efficiently. This project includes responsive design that will allow users to view the website seamlessly on different devices (computer, phone, tablet).
 
 ## Author : Musa OCAK
 
@@ -10,6 +10,7 @@ ModaMusa is an online clothing store created using HTML, CSS and JavaScript. Thi
 - Modern CSS, including flexbox and CSS Grid for layout.
 - Modern CSS techniques to create stunning designs and effects.
 - Advanced responsive design using media queries.
+- Dynamic HTML Generation with JSON
 
 ### Installation
 
