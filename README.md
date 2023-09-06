@@ -27,7 +27,7 @@ git clone https://github.com/musaocak1/CTRL_Future_Project-ModaMusa.git
 
 - You can view the website by opening the index.html file in the folder in the browser.
 
-### Feature Works
+### Future Works
 This section contains the further development phases of the project.
 
 #### Shopping Cart Functionality
